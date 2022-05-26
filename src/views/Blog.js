@@ -87,16 +87,20 @@ function Blog() {
 				) : (
 					<div>Loading...</div>
 				)}
-				{comments &&( <><h2>Comentarii</h2>
-						(comments.map((comment)=>{
+				{comments && (
+					<>
+						<h2>Comentarii</h2>
+						{comments.map((comment) => {
 							return (
-								<Row className="mt-2 p-2">
+								<Row className='mt-2 p-2'>
 									<h4>{comments.name}</h4>
 									<p>{comments.body}</p>
 								</Row>
 							);
-						}));
-				</>)}
+						})}
+						;
+					</>
+				)}
 			</Container>
 			<Footer />
 		</>
