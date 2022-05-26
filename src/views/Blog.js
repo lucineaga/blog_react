@@ -28,7 +28,7 @@ function Blog() {
 		setUser(apiUser);
 	};
 
-	const getComments = async (userId) => {
+	const getComments = async (postId) => {
 		const responseData = await fetch(
 			"https://jsonplaceholder.typicode.com/comments?postId=1" + postId
 		);
